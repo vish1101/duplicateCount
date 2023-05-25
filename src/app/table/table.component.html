@@ -1,0 +1,14 @@
+<table class="table table-bordered">
+  <thead>
+    <th>Name</th>
+    <th>Count</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let name of distinctNames">
+      <td [ngStyle]="getCellStyle(nameCounts.get(name))">{{ name }}</td>
+      <td [ngStyle]="getCellStyle(nameCounts.get(name))">
+        {{ nameCounts.get(name) }}
+      </td>
+    </tr>
+  </tbody>
+</table>
